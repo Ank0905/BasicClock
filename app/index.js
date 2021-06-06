@@ -1,5 +1,7 @@
 import clock from "clock";
 import document from "document";
+import { display } from "display";
+import {me} from "appbit"
 
 // Tick every second
 clock.granularity = "seconds";
@@ -39,3 +41,19 @@ function updateClock() {
 
 // Update the clock every tick event
 clock.addEventListener("tick", updateClock);
+
+
+if (display.aodAvailable && me.permissions.granted("access_aod")) {
+  display.aodAllowed = true;
+  // display.aodActive = true;
+  display.addEventListener("change", () => {
+    console.log("aod active: ", display.aodActive)
+    if (!display.aodActive && display.on) {
+      clock.granularity = "seconds";
+      secHand.style.display = 'inline';
+    } else {
+      clock.granularity = "minutes";
+      secHand.style.display = 'none';
+    }
+  })
+}

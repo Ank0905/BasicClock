@@ -9,7 +9,7 @@
     "appDisplayName": "BasicClock",
     "iconFile": "resources/icon.png",
     "wipeColor": "",
-    "requestedPermissions": [],
+    "requestedPermissions": ["access_aod"],
     "buildTargets": [
       "atlas",
       "vulcan"
