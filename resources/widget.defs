@@ -1,5 +1,35 @@
 <svg>
   <defs>
+    <symbol id="heartAnim">
+      <g id="hearticon" transform="translate(50%,50%)">
+        <image href="images/heart1.png" class="image" />
+        <animateTransform attributeName="transform" attributeType="scale"
+          begin="highlight" end="unload;unhighlight" from="1,1" to="0.92,0.92"
+          repeatCount="indefinite" final="keep" />
+        <animateTransform attributeName="transform" attributeType="scale"
+          begin="highlight+0.433" end="unload;unhighlight" from="0.92,0.92" to="1,1"
+          repeatCount="indefinite" final="keep" />
+        <animate attributeName="fill"
+        begin="highlight" end="unload;unhighlight" from="#ffffff" to="#ffffee"
+        repeatCount="indefinite" final="keep" />
+         <animate attributeName="fill"
+        begin="highlight+0.433" end="unload;unhighlight" from="#ffffee" to="#ffffff"
+        repeatCount="indefinite" final="keep" />
+      </g>
+    </symbol>
+
+    <symbol id="stepAnim">
+      <g id="stepIcon" transform="translate(50%,50%)">
+        <image href="images/footsteps.png" class="image" />
+        <!-- <animate attributeName="fill"
+        begin="highlight" end="unload;unhighlight" from="#ffffff" to="#ffff00"
+        repeatCount="indefinite" final="keep" />
+         <animate attributeName="fill"
+        begin="highlight+0.433" end="unload;unhighlight" from="#ffff00" to="#ffffff"
+        repeatCount="indefinite" final="keep" /> -->
+      </g>
+    </symbol>
+
     <link rel="stylesheet" href="styles.css" />
     <link rel="import" href="/mnt/sysassets/system_widget.defs" />
   </defs>

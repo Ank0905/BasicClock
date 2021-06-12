@@ -186,36 +186,57 @@
     </symbol>
   </defs>
 
+  <gradientRect x="0" y="0" width="100%" height="100%" id="gradientBG"
+    gradient-type="radial"
+    gradient-x1="50%" gradient-y1="50%"
+    gradient-x2="50%+100" gradient-y2="50%+100"
+    gradient-color1="#004e92"
+    gradient-color2="black" />
+
+<g id="clockNumbers">
+  <text class="hours-text" id="text-12" x="50%" y="50%-130" >12</text>
+  <text  class="hours-text" id="text-3" x="50%+135" y="50%+5" >3</text>
+  <text  class="hours-text" id="text-6" x="50%" y="50%+140" >6</text>
+  <text  class="hours-text" id="text-9" x="50%-135" y="50%+5" >9</text>
+</g>
+  
   <g transform="translate(50%,50%)">
-  <g id="mins" pointer-events="visible">
-    <rect x="$-4" y="-110" width="4" height="110" fill="#e0e0e0" rx="2" ry="2" />
-  </g>
+
   <g id="hours" pointer-events="visible">
-    <rect x="$-6" y="-75" width="12" height="75" fill="#ffffff" rx="6" ry="6" />
+     <line x1="4" y1="16" x2="0" y2="-30%" stroke-width="1" class="min-hand-color" />
+      <line x1="2" y1="17" x2="0" y2="-30%" stroke-width="1" class="min-hand-color" />
+      <line x1="0" y1="17" x2="0" y2="-30%" stroke-width="1" class="min-hand-color" />
+      <line x1="-2" y1="16" x2="0" y2="-30%" stroke-width="1" class="min-hand-color" />
+  </g>
+  <g id="mins" pointer-events="visible">
+    <line x1="4" y1="16" x2="0" y2="-42%" stroke-width="1" class="markercolour" />
+      <line x1="2" y1="17" x2="0" y2="-42%" stroke-width="1" class="markercolour" />
+      <line x1="0" y1="17" x2="0" y2="-42%" stroke-width="1" class="markercolour" />
+      <line x1="-2" y1="16" x2="0" y2="-42%" stroke-width="1" class="markercolour" />
   </g>
   <g id="secs" pointer-events="visible" >
-    <!-- <rect x="$-2" y="-120" width="4" height="120" fill="#ff0000" /> -->
-    <!-- <g
-       transform="translate(50%,50%)"
-       id="g4608-0"> -->
-      <rect
-         ry="4"
-         rx="4"
-         y="$+28"
-         height="101"
-         width="8"
-         id="rect4602-6"
-         fill="#00ffff" />
-      <rect
-         ry="2"
-         rx="2"
-         height="30"
-         width="4"
-         id="rect4604-7"
-         fill="#00ffff" />
-    <!-- </g> -->
+    <line x1="0" y1="4%" x2="0" y2="-40%" stroke-width="2" fill="#00ffff" />
   </g>
-  <use href="#maindial" />
-  <circle cx="50%" cy="50%" r="10" fill="#444444" />
+    
+  <g>
+    <circle r="6" fill="#00ffff" />
+    <circle r="4" fill="white" />
+  </g>
+    
+  <use href="#maindial" id="dial"/>
+  </g>
+  <g id="heart-container">
+    <use id="iconHRM" href="#heartAnim" x="50% - 20" y="50% + 40" />
+    <text id="txtHRM" class="heartrate" x="50% - 10" y="50% + 105" />
+  </g>
+
+  <g id="step-container">
+    <use id="iconSteps" href="#stepAnim" x="20%" y="50% - 100" />
+    <text id="txtSteps" class="stepCount" x="20% - 10" y="50% - 35" />
+  </g>
+
+  <g id="date-container">
+    <text id="monthId" class="month-text" x="70% - 10" y="50% - 60" />
+    <text id="dateId" class="date-text" x="80% - 40" y="50% - 35" />
   </g>
 </svg>

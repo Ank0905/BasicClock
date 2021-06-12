@@ -2,6 +2,14 @@
   viewport-fill: black;
 }
 
+.hours-text{
+  font-size: 20;
+  font-family: System-Bold;
+  text-length: 2;
+  text-anchor: middle;
+  fill: white;
+}
+
 #myLabel {
   font-size: 80;
   font-family: System-Bold;
@@ -16,6 +24,10 @@
   fill: white;
 }
 
+.min-hand-color{
+  fill:aliceblue;
+}
+
 .maindialfive {
   x: 0%-1;
   y: -48%;
@@ -28,4 +40,46 @@
   y: -48%;
   width: 2;
   height: 2;
+}
+
+.heartrate {
+  fill: white;
+  text-length: 4;
+  text-anchor: start;
+  font-size: 26;
+}
+
+.month-text
+{ fill: aquamarine;
+  text-length: 3;
+  text-anchor: start;
+  font-size: 20;
+}
+
+.date-text
+{
+  fill: white;
+  text-length: 2;
+  text-anchor: start;
+  font-family: System-Bold;
+  font-size: 26;
+}
+
+.stepCount{
+  fill: white;
+  text-length: 8;
+  text-anchor: start;
+  font-size: 26;
+}
+
+#iconHRM {
+  width: 24;
+  height: 24;
+  fill: white;
+}
+
+#iconSteps {
+  width: 18;
+  height: 25;
+  fill: white;
 }
